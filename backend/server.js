@@ -13,12 +13,14 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/transactions', transactionRoutes);
+app.use('/transactions', transactionRoutes);
 
 // Health check
-app.get('/api/health', (req, res) => {
+app.get('/health', (req, res) => {
   res.json({ status: 'OK', message: 'Server is running' });
 });
+
+app.use(/api/transactions, transactionRoutes)
 
 export default app;
 /*app.listen(PORT, () => {
