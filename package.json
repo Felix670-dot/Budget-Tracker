@@ -1,0 +1,14 @@
+{
+    "name": "full-stack-budget_tracker-app",
+    "version": "1.0.0",
+    "description": "Monorepo for transaction app.",
+    "scripts": {
+        "build": "npm run build --prefix frontend",
+        "install-backend": "npm install --prefix backend",
+        "install-frontend": "npm install --prefix frontend",
+        "vercel-build": "npm run install-backend && npm run build"
+    },
+        "dependencies": {
+        "vercel": "^32.5.0"
+    }
+}
