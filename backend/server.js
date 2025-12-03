@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/transactions', transactionRoutes);
+app.use('/api/transactions', transactionRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).send('API Server is Operational. Use the /api endpoint for transaction data.');
